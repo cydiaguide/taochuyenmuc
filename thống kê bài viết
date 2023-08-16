@@ -1,0 +1,13 @@
+<?php $args = array( 'parent' => 0, 'hide_empty' => 0 );
+
+$categories = get_categories( $args );
+
+echo count( $categories ). " Category ";    ?> - <?php // Get total number of posts
+    $count_posts = wp_count_posts();
+    $total_posts = $count_posts->publish;
+    echo $total_posts . ' Posts';
+?> - <?php // Get total number of comments
+    $count_comments = wp_count_comments();
+    $total_comments = $count_comments->approved;
+    echo $total_comments . ' Comments';
+?>
